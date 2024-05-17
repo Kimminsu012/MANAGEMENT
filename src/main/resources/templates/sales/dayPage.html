@@ -26,39 +26,39 @@
         <div class="dayContent">
             <div class="InCome">
                 <div class="IncomeTitle">
-                    <span>상품</span>
-                    <span>금액</span>
+                    <span class="ser_wid">상품</span>
+                    <span class="ser_wid">금액</span>
                 </div>
                 <div class="incomeService">
-                    <span>서비스 금액</span>
-                    <p th:text="${#numbers.formatInteger(serviceCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">서비스 금액</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(serviceCost,1,'COMMA') + '원'}"></span>
                 </div>
                 <div class="incomeProduct">
-                    <span>상품판매</span>
-                    <p th:text="${#numbers.formatInteger(productSellCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">상품판매</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(productSellCost,1,'COMMA') + '원'}"></span>
                 </div>
                 <div class="incomeCost">
-                    <span>수입 합계</span>
-                    <p th:text="${#numbers.formatInteger(totalIncomeCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">수입 합계</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(totalIncomeCost,1,'COMMA') + '원'}"></span>
                 </div>
             </div>
 
             <div class="spending">
                 <div class="spendingTitle">
-                    <span>상품</span>
-                    <span>금액</span>
+                    <span class="ser_wid">상품</span>
+                    <span class="ser_wid">금액</span>
                 </div>
                 <div class="spendingSalary">
-                    <span>월급</span>
-                    <p th:text="${#numbers.formatInteger(salaryCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">월급</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(salaryCost,1,'COMMA') + '원'}"></span>
                 </div>
                 <div class="spendingProduct">
-                    <span>상품 구입</span>
-                    <p th:text="${#numbers.formatInteger(productBuyCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">상품 구입</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(productBuyCost,1,'COMMA') + '원'}"></span>
                 </div>
                 <div class="spendingCost">
-                    <span>지출 합계</span>
-                    <p th:text="${#numbers.formatInteger(totalExpenseCost,1,'COMMA') + '원'}"></p>
+                    <span class="ser_wid">지출 합계</span>
+                    <span class="ser_wid" th:text="${#numbers.formatInteger(totalExpenseCost,1,'COMMA') + '원'}"></span>
                 </div>
             </div>
         </div>
