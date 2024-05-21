@@ -83,16 +83,16 @@
                     <div class="graph">
                         <div class="buy_box" th:each="buy : ${buyList}">
                             <div class="buy_sell_box">
-                                <span th:text="${buy.idClass}" th:if="${buyStat.index < 5}"></span>
+                                <span th:text="${buy.idClass}" th:if="${buyStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${buy.itemNm}" th:if="${buyStat.index < 5}"></span>
+                                <span th:text="${buy.itemNm}" th:if="${buyStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${buy.count}" th:if="${buyStat.index < 5}"></span>
+                                <span th:text="${buy.count}" th:if="${buyStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${#numbers.formatInteger(buy.buyCash, 3, 'COMMA')+'원'}" th:if="${buyStat.index < 5}"></span>
+                                <span th:text="${#numbers.formatInteger(buy.buyCash, 3, 'COMMA')+'원'}" th:if="${buyStat.index < 6}"></span>
                             </div>
                         </div>
                     </div>
@@ -118,16 +118,16 @@
                     <div class="graph">
                         <div class="sell_box" th:each="sell : ${sellList}">
                             <div class="buy_sell_box">
-                                <span th:text="${sell.idClass}" th:if="${sellStat.index < 5}"></span>
+                                <span th:text="${sell.idClass}" th:if="${sellStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${sell.itemNm}" th:if="${sellStat.index < 5}"></span>
+                                <span th:text="${sell.itemNm}" th:if="${sellStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${sell.count}" th:if="${sellStat.index < 5}"></span>
+                                <span th:text="${sell.count}" th:if="${sellStat.index < 6}"></span>
                             </div>
                             <div class="buy_sell_box">
-                                <span th:text="${#numbers.formatInteger(sell.sellCash, 3, 'COMMA')+'원'}" th:if="${sellStat.index < 5}"></span>
+                                <span th:text="${#numbers.formatInteger(sell.sellCash, 3, 'COMMA')+'원'}" th:if="${sellStat.index < 6}"></span>
                             </div>
                         </div>
                     </div>

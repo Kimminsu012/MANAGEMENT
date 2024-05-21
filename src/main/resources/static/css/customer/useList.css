@@ -1,14 +1,12 @@
 
 .customer-box {
-    width: 80%;
+    width: 1376px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff;
-    position: relative;
-    top: 30%;
-    left: 10%;
+    height: 763px;
 }
 .customer-box-title{
     width: 100%;
