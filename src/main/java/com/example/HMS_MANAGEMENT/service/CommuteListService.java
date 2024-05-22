@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -27,7 +28,10 @@ public class CommuteListService implements Converter<CommuteListEntity, CommuteL
         commuteList.setCommuteStatus(dto.getCommuteStatus());
         commuteList.setMorningTime(dto.getMorningTime());
         commuteList.setAfterTime(dto.getAfterTime());
-        LocalTime resultTime = dto.getMorningTime().minusHours(dto.getAfterTime().getHour()).minusMinutes(dto.getAfterTime().getMinute());
+        Duration duration = Duration.between(dto.getMorningTime(), dto.getAfterTime());
+        LocalTime resultTime = LocalTime.of((int) duration.toHours(), (int) (duration.toMinutes() % 60));
+        commuteList.setResultTime(resultTime);
+
         commuteList.setResultTime(resultTime);
         commuteList.setDate(LocalDate.now());
         commuteList.setTime(LocalTime.now());
@@ -46,7 +50,9 @@ public class CommuteListService implements Converter<CommuteListEntity, CommuteL
         dto.setCommuteStatus(entity.getCommuteStatus());
         dto.setMorningTime(entity.getMorningTime());
         dto.setAfterTime(entity.getAfterTime());
-        LocalTime resultTime = entity.getMorningTime().minusHours(entity.getAfterTime().getHour()).minusMinutes(entity.getAfterTime().getMinute());
+        Duration duration = Duration.between(entity.getMorningTime(), entity.getAfterTime());
+        LocalTime resultTime = LocalTime.of((int) duration.toHours(), (int) (duration.toMinutes() % 60));
+        dto.setResultTime(resultTime);
         dto.setResultTime(resultTime);
         dto.setDate(entity.getDate());
         dto.setTime(entity.getTime());
