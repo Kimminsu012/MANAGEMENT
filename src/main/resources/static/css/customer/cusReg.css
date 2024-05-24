@@ -11,9 +11,9 @@
     border-bottom: 1px solid #aaa;
 }
 .form-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
     margin-bottom: 20px;
 }
 .form-group label {
@@ -48,4 +48,12 @@
 }
 #visit_date_year{
     margin-left: 0;
+}
+.form_out{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
